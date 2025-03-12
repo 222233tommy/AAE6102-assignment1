@@ -1,6 +1,7 @@
 # Project name
 
 This is a modified GNSS-SDR software for AAE6102 (Satellite Navigation).
+Author: Baoshan Song.
 
 
 ## Manual
