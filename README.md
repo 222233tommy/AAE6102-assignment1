@@ -111,6 +111,9 @@ The results of EKF-based state estimation are shown as below:
 
 1\) Open-sky dataset:
 
+![ekf_pos](https://github.com/222233tommy/AAE6102-assignment1/blob/main/assignment1/ekf_pos.png)
+
+
 For the Open-sky test, position error in E smaller than 300 m and velocity error in X smaller than 25 m/s). We consider that the positioning results benefit from two constraints: the constant velocity systematic model constraint and the low-noise Doppler measurements constraint.
 
 2\) Urban dataset:
