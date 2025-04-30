@@ -75,7 +75,7 @@ tracking results of PRN16
 
 
 2\) Urban test
-
+In the Urban test, the autocorrelation function (ACF) displays distortion, indicating noisy signal affected by non-line-of-sight (NLOS) signal or multi-path effect. The observed symmetry confirms the existence of significant NLOS and multi-path effects in the Urban environment.
 ACF of PRN11
 
 ![acf](https://github.com/222233tommy/AAE6102-assignment1/blob/main/assignment1/acf_2.png)
