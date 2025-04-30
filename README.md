@@ -27,8 +27,21 @@ For each PRN, we generated local C/A code replicas and transformed them into the
 The results of acquisition are shown as below.
 
 1\) Open-sky test
+| Channel | PRN  | Frequency   | Doppler | Code Offset | Status |
+| ------- | ---- | ----------- | ------- | ----------- | ------ |
+| 1       | 16   | 4.57976e+06 | -240    | 31994       | T      |
+| 2       | 26   | 4.58192e+06 | 1917    | 57754       | T      |
+| 3       | 31   | 4.58107e+06 | 1066    | 18744       | T      |
+| 4       | 22   | 4.58157e+06 | 1571    | 55101       | T      |
+| 5       | 27   | 4.57678e+06 | -3220   | 8814        | T      |
 
 2\) Urban test
+| Channel | PRN  | Frequency   | Doppler | Code Offset | Status |
+| ------- | ---- | ----------- | ------- | ----------- | ------ |
+| 1       | 1    | 1.20258e+03 |    1203   |      3329   |     T  |
+|       2 |   3 |  4.28963e+03 |    4290   |     25173   |     T  |
+|       3 |  11 |  4.09126e+02 |     409   |      1155   |     T  |
+|       4 |  18 |  -3.22342e+02 |    -322   |     10581   |     T  |
 
 # Task 2: Tracking of SDR
 
