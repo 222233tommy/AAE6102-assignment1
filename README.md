@@ -64,7 +64,7 @@ In this task, we provide the results in extracting the navigation message by ena
 
 In summary, although the IF data is noisy and challenging for Navigation data decoding. Luckily, the Code Division Multiple Access (CDMA) technique helps to lower down the noise and finally we can still get clean ephemerides from the IF data.
 
-# Task 4: Weighted Least Squares (WLS)-based navigation
+# Task 4 & 5: Weighted Least Squares (WLS)-based and extended Kalman-filter (EKF)-based navigation
 
     Position is estimated in 'Common/leastSquarePos.m' and Velocity is estimated in 'Common/leastSqaureVel.m';
 
@@ -95,23 +95,28 @@ W=\frac {1}{(\alpha+sin^2(EL))^2}, EL>30\degree; or \frac{1}{\alpha^2}, EL<30\de
 
 ```
 
-We evaluate the SPP and SPV using both open-sky and urban datasets. Their results are shown in the following figures. Note that we just found that the signs of Doppler shift measurements are opposite in open-sky and urban datasets, thus we converted them to the same before velocity estimation.&#x20;
 
-# Task 5: Extended Kalman filter (EKF)-based navigation
 
-    Kalman filter-based positioning is done in 'Common/ekf.m', which employs constant velocity model in the prediction phase and Pseudorange/Doppler measurements in measuring update phase.
-
-In this task, we aim to estimate the position and velocity together in an extended Kalman filter (EKF). Based on EKF, we can get a smoother solution.
+    Kalman filter-based positioning is done in 'Common/ekf.m', which employs constant velocity model in the prediction phase and Pseudorange/Doppler measurements in measuring update phase. Here we aim to estimate the position and velocity together in an extended Kalman filter (EKF). Based on EKF, we can get a smoother solution.
 
 ```math
 X=[p_x,p_y,p_z, v_x,v_y,v_z, c\cdot d t,c\cdot d\dot t]^T
 ```
 
-The results of EKF-based state estimation are shown as below:
+We evaluate the SPP and SPV using both open-sky and urban datasets. Their results are shown in the following figures. Note that we just found that the signs of Doppler shift measurements are opposite in open-sky and urban datasets, thus we converted them to the same before velocity estimation.&#x20; The results of WLS-based and EKF-based state estimation are shown as below:
 
 1\) Open-sky dataset:
 
+WLS-based positioning
+![wls_pos](https://github.com/222233tommy/AAE6102-assignment1/blob/main/assignment1/spp_pos.png)
+
+
+EKF-based positioning
 <img src="https://raw.githubusercontent.com/222233tommy/AAE6102-assignment1/main/assignment1/ekf_pos.png" style="zoom: 25%;" />
+
+WLS-based vs. EKF-based velocity error
+![ekf_spv_vel](https://github.com/222233tommy/AAE6102-assignment1/blob/main/assignment1/velocity_error_ekf_spv.png)
+
 
 
 For the Open-sky test, position error in E smaller than 300 m and velocity error in X smaller than 25 m/s). We consider that the positioning results benefit from two constraints: the constant velocity systematic model constraint and the low-noise Doppler measurements constraint.
