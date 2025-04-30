@@ -57,7 +57,15 @@ These multiple correlation points enable detailed visualization of the auto-corr
 
 In the Open-sky test, the autocorrelation function (ACF) displays symmetric and well-defined peaks across all measurement epochs, indicating clean line-of-sight signal reception with minimal distortion. The observed symmetry confirms the absence of significant multipath effects in the open-sky environment.
 
+ACF of PRN16 
+
 ![acf](https://github.com/222233tommy/AAE6102-assignment1/blob/main/assignment1/acf.png)
+
+tracking results of PRN16
+![tracking](https://github.com/222233tommy/AAE6102-assignment1/blob/main/assignment1/ac_ch1.png)
+
+
+
 
 
 2\) Urban test
