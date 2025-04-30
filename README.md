@@ -35,6 +35,9 @@ The results of acquisition are shown as below.
 | 4       | 22   | 4.58157e+06 | 1571    | 55101       | T      |
 | 5       | 27   | 4.57678e+06 | -3220   | 8814        | T      |
 
+
+![ac1](https://github.com/222233tommy/AAE6102-assignment1/blob/main/assignment1/Acquisition_metric_1.png)
+
 2\) Urban test
 | Channel | PRN  | Frequency   | Doppler | Code Offset | Status |
 | ------- | ---- | ----------- | ------- | ----------- | ------ |
@@ -42,6 +45,9 @@ The results of acquisition are shown as below.
 |       2 |   3 |  4.28963e+03 |    4290   |     25173   |     T  |
 |       3 |  11 |  4.09126e+02 |     409   |      1155   |     T  |
 |       4 |  18 |  -3.22342e+02 |    -322   |     10581   |     T  |
+
+![ac2](https://github.com/222233tommy/AAE6102-assignment1/blob/main/assignment1/Acquisition_metric_2.png)
+
 
 # Task 2: Tracking of SDR
 
@@ -69,6 +75,15 @@ tracking results of PRN16
 
 
 2\) Urban test
+
+ACF of PRN11
+
+![acf](https://github.com/222233tommy/AAE6102-assignment1/blob/main/assignment1/acf_2.png)
+
+tracking results of PRN11
+![tracking](https://github.com/222233tommy/AAE6102-assignment1/blob/main/assignment1/ac_ch3_2.png)
+
+
 
 # Task 3: Navigation data decoding
 
@@ -208,6 +223,17 @@ WLS-based vs. EKF-based velocity error
 For the Open-sky test, position error in E smaller than 300 m and velocity error in X smaller than 25 m/s). We consider that the positioning results benefit from two constraints: the constant velocity systematic model constraint and the low-noise Doppler measurements constraint.
 
 2\) Urban dataset:
+
+WLS-based positioning
+![wls_pos2](https://github.com/222233tommy/AAE6102-assignment1/blob/main/assignment1/spp_pos2.png)
+
+
+EKF-based positioning
+<img src="https://raw.githubusercontent.com/222233tommy/AAE6102-assignment1/main/assignment1/ekf_pos2.png" style="zoom: 25%;" />
+
+WLS-based vs. EKF-based velocity error
+![ekf_spv_vel2](https://github.com/222233tommy/AAE6102-assignment1/blob/main/assignment1/velocity_error_ekf_spv2.png)
+
 
 According to the results of the Urban test, positioning errors are limited and there are less zig-zag in the positioning error figure (position error in E smaller than 300 m and velocity error in X smaller than 25 m/s). This is because the noises of both the constant velocity and Doppler measurements are smaller so that the EKF benefits from them. Moreover, the filter parameters align well with real situation, i.e. static mode.
 
